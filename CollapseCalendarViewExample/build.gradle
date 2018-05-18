@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
@@ -12,14 +12,14 @@ android {
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -31,5 +31,6 @@ android {
 }
 
 dependencies {
-    compile project(':CollapseCalendarView')
+    implementation project(':CollapseCalendarView')
+    implementation 'joda-time:joda-time:2.9.9'
 }
